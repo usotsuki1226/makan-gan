@@ -1,0 +1,38 @@
+{
+    "Mexican": {
+        "recipes": [
+            {
+                "name": "Tacos",
+                "ingredients": ["Tortillas", "Ground beef", "Cheese", "Lettuce", "Tomato"]
+            },
+            {
+                "name": "Guacamole",
+                "ingredients": ["Avocado", "Lime", "Salt", "Onion", "Tomato"]
+            }
+        ]
+    },
+    "American": {
+        "recipes": [
+            {
+                "name": "Burger",
+                "ingredients": ["Ground beef", "Bun", "Lettuce", "Tomato", "Cheese"]
+            }
+        ]
+    },
+    "Italian": {
+        "recipes": [
+            {
+                "name": "Spaghetti",
+                "ingredients": ["Spaghetti", "Tomato sauce", "Garlic", "Olive oil"]
+            }
+        ]
+    },
+    "Asian": {
+        "recipes": [
+            {
+                "name": "Sushi",
+                "ingredients": ["Sushi rice", "Nori", "Fish", "Vegetables"]
+            }
+        ]
+    }
+}
