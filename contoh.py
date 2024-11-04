@@ -1,21 +1,20 @@
 import tkinter as tk
 import random
 import webbrowser
-from PIL import Image, ImageTk  # Import the necessary libraries for image handling
-
+from PIL import Image, ImageTk  
 window = tk.Tk()
-window.title('My Recipe Selector')
-window.geometry('400x400')
+window.title('NyamNyam')
+window.geometry('600x600')
 window.iconbitmap(r"F:\nyamnyam\sombrero.ico")
 
-# Load the background image
-background_image = Image.open("F:/nyamnyam/justindisini.png")
-background_image = background_image.resize((400, 400), Image.ANTIALIAS)  # Resize to fit the window
-bg_image = ImageTk.PhotoImage(background_image)
+#justin
+#background_image = Image.open("F:/nyamnyam/justindisini.png")
+#background_image = background_image.resize((400, 400), Image.ANTIALIAS)  
+bg= ImageTk.PhotoImage(file="F:/nyamnyam/justindisini.png")
 
-# Create a Label widget to display the background image
-bg_label = tk.Label(window, image=bg_image)
-bg_label.place(x=0, y=0, relwidth=1, relheight=1)  # Make it fill the window
+
+bg_label = tk.Label(window, image=bg)
+bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 label_font = ("Arial", 12)
 l = tk.Label(window, bg='white', width=100, text='Select Ingredients')
@@ -47,6 +46,11 @@ recipes = {
     },
     "IDK CONTOH AMERIKA": {
         "ingredients": ["chicken", "onion", "garlic", "egg"], 
+        "cuisine": "American",
+        "link": "https://www.youtube.com/watch?v=GMYCMzvOJ5Q"
+    },
+    "Egg Tomato Soup": {
+        "ingredients": ["tomato", "onion", "garlic", "egg"], 
         "cuisine": "Asian",
         "link": "https://www.youtube.com/watch?v=GMYCMzvOJ5Q"
     }
@@ -58,6 +62,7 @@ selected_cuisine = tk.StringVar(window)
 selected_cuisine.set(cuisines[0])  
 cuisine_menu = tk.OptionMenu(window, selected_cuisine, *cuisines)
 cuisine_menu.pack()
+
 
 def print_selection():
     selected_ingredients.clear()
